@@ -6,7 +6,7 @@ const palindrome = (str) => {
     }
       return true;
   }
-}
+}c
 // console.log(palindrome('ratstar'));
 
 // let arr = [1, 4, -2, -9, 2];

@@ -14,15 +14,7 @@
 // // ]))
 //
 // const transpose = (mtx) => {
-//   let grid = [];
-//
-//   for (let i = 0; i < mtx.length; i++) {
-//     grid[i] = [];
-//     for (let j = 0; j < mtx.length; j++) {
-//       grid[i][j] = mtx[j][i];
-//     }
-//   }
-//   return grid;
+//   .
 // }
 //
 // let mtx = [[2, 3, 4, 12], [5, 6, 7, 14]];
@@ -128,7 +120,6 @@ const disemvowel = (str) => {
 // console.log(disemvowel("Hello world"))
 
 const myCallback = (sub, cb) => {
-  console.log(cb);
   return cb(sub);
 }
 
@@ -137,3 +128,89 @@ myCallback(2, (int) => {
 })
 
 // console.log(myCallback());
+
+
+
+// let namesArr = ["T'Keya", "Johnny", "Yulonda"];
+// let resultArr = [];
+//
+// for (let i = 0; i < namesArr.length; i++) {
+//   resultArr.push("Hi" + namesArr[i]);
+// }
+// console.log(resultArr)
+
+
+Array.prototype.myMap = function(callback) {
+  // let resultArr = [];
+  [this].forEach((el) => {
+    // resultArr.push(el);
+    callback(this[el]);
+  });
+};
+
+[2, 4, 6].myMap(el => {
+  // console.log(el*2);
+})
+
+
+// let sum = 10;
+// let arr = [1, 2, 3];
+//
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// console.log(sum)
+
+
+let arr = [1, 2, 3];
+
+let sum = arr.reduce((acc, el) => {
+  return el + acc;
+}, 10);
+
+// console.log(sum)
+
+
+//Every: want to start off true
+//Some: want to start off false
+
+let matches = [
+  {name: "Esmeralda", available: false},
+  {name: "Regis", available: true},
+  {name: "Face", available: true}
+]
+
+let someAvailable = false;
+
+for (let i = 0; i < matches.length; i++) {
+  if (matches[i].available) {
+    someAvailable = true
+  }
+}
+// console.log(someAvailable);
+
+
+Array.prototype.myEvery = function(callback) {
+  for (let i = 0; i < this.length; i++) {
+    return (!(callback(this[i], inode))) ? false : true;
+    // if (callback(this[i])) {
+    //   return true;
+    // }
+  }
+}
+
+function greaterThan10(num) {
+  return num === 10;
+}
+let anArr = [10, 11, 10, 10];
+
+let everied = anArr.myEvery(el, i, arr) => {
+    return el === arr[0]
+});
+
+
+let anybody = matches.some(el => {
+  return el.available;
+})
+
+// console.log(anybody)

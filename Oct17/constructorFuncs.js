@@ -1,21 +1,21 @@
 
 
-// const readline = require('readline');
-//
-// const reader = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
-//
-// const responder = {
-//   crazyResponse: (input) => {
-//     return `Whoa! ${input} is pretty crazy!`
-//   }
-// }
-//
-// reader.question(`What's the craziest thing you've ever done? \n`, (res) => {
-//   // console.log(responder.crazyResponse(res));
-// });
+const readline = require('readline');
+
+const reader = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+const responder = {
+  crazyResponse: (input) => {
+    return `Whoa! ${input} is pretty crazy!`
+  }
+}
+
+reader.question(`What's the craziest thing you've ever done? \n`, (res) => {
+  // console.log(responder.crazyResponse(res));
+});
 //
 // Array.prototype.myReduce = function(callback, acc) {
 //   let startingIdx = 0;
